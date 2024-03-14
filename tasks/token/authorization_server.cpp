@@ -1,6 +1,6 @@
 #include <ctime>
 
-#include "update_RSA.hpp"
+#include "../update_RSA.hpp"
 
 struct payload {
     std::string login;
@@ -53,7 +53,13 @@ class token {
 };
 
 int main() {
-    token jwt_token = token("ivan", "pechechkin");
+    std::cout << "Your login: ";
+    std::string  login, password;
+    std::cin >> login;
+    std::cout << "Your password: ";
+    std::cin >> password;
+
+    token jwt_token = token(login, password);
 
     std::cout << "TOKEN:\n" << jwt_token.get_token() << '\n';
     auto pub_key = jwt_token.get_public_key();

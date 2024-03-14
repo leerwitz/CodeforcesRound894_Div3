@@ -1,6 +1,6 @@
 #include <ctime>
 
-#include "update_RSA.hpp"
+#include "../update_RSA.hpp"
 
 int main() {
     std::string jwt_token, signature, first_and_second_part_of_token, second_part_of_token, first_part_of_token;

@@ -11,13 +11,13 @@ dop_task_week4: dop_task_week4.cpp
 	$(C) $(CFLAGS) -c 1792_D.cpp -o 1792_D.o
 	$(C) $(CFLAGS)  1792_D.o -o 1792_D
 
-authorization_server: authorization_server.cpp
-	$(C) $(CFLAGS) -c authorization_server.cpp -o authorization_server.o
+authorization_server: token/authorization_server.cpp
+	$(C) $(CFLAGS) -c token/authorization_server.cpp -o authorization_server.o
 	$(C) $(CFLAGS)  authorization_server.o -o authorization_server
 
 
-check_token: check_token.cpp
-	$(C) $(CFLAGS) -c check_token.cpp -o check_token.o
+check_token: token/check_token.cpp
+	$(C) $(CFLAGS) -c token/check_token.cpp -o check_token.o
 	$(C) $(CFLAGS)  check_token.o -o check_token
 
 671_C: 671_C.cpp
