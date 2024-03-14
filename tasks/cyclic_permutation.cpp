@@ -2,6 +2,8 @@
 #include <vector>
 
 std::vector<long long> get_vector_pow_p(const int p, size_t size);
+std::vector<size_t> algorithm_Rabina_Karpa(std::string str, std::string substr, std::vector<long long> pow_p);
+std::vector<size_t> get_max_substr(std::string str1, std::string str2, std::vector<long long> pow_p, size_t &first, size_t &last);
 
 std::vector<size_t> algorithm_Rabina_Karpa(std::string str, std::string substr, std::vector<long long> pow_p) {
     long long cur_hash;
