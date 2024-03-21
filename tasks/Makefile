@@ -1,44 +1,33 @@
 C = g++
-CFLAGS = -pedantic -Wall -Wextra -Wcast-align -Wcast-qual -g -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow  -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=4 -Wswitch-default -Wundef -Werror -Wno-unused
+CFLAGS = -pedantic -Wall -Wextra -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow  -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wswitch-default -Wundef -Werror -Wno-unused
 
-all: dop_task_week4 check_token 671_C 1527_C cyclic_permutation TestHashTable authorization_server 1792_D
+all: 678_D 900_B 900_C 181_C 900_D
 
-dop_task_week4: dop_task_week4.cpp
-	$(C) $(CFLAGS) -c dop_task_week4.cpp -o dop_task_week4.o
-	$(C) $(CFLAGS)  dop_task_week4.o -o dop_task_week4
-
-1792_D: 1792_D.cpp
-	$(C) $(CFLAGS) -c 1792_D.cpp -o 1792_D.o
-	$(C) $(CFLAGS)  1792_D.o -o 1792_D
-
-authorization_server: token/authorization_server.cpp
-	$(C) $(CFLAGS) -c token/authorization_server.cpp -o authorization_server.o
-	$(C) $(CFLAGS)  authorization_server.o -o authorization_server
+678_D: 678_D.cpp
+	$(C) $(CFLAGS) -c 678_D.cpp -o 678_D.o
+	$(C) $(CFLAGS)  678_D.o -o 678_D
 
 
-check_token: token/check_token.cpp
-	$(C) $(CFLAGS) -c token/check_token.cpp -o check_token.o
-	$(C) $(CFLAGS)  check_token.o -o check_token
 
-671_C: 671_C.cpp
-	$(C) $(CFLAGS) -c 671_C.cpp -o 671_C.o
-	$(C) $(CFLAGS)  671_C.o -o 671_C
+900_B: 900_B.cpp
+	$(C) $(CFLAGS) -c 900_B.cpp -o 900_B.o
+	$(C) $(CFLAGS)  900_B.o -o 900_B
 
-1527_C: 1527_C.cpp
-	$(C) $(CFLAGS) -c 1527_C.cpp -o 1527_C.o
-	$(C) $(CFLAGS)  1527_C.o -o 1527_C
+900_C: 900_C.cpp
+	$(C) $(CFLAGS) -c 900_C.cpp -o 900_C.o
+	$(C) $(CFLAGS)  900_C.o -o 900_C
 
-cyclic_permutation: cyclic_permutation.cpp
-	$(C) $(CFLAGS) -c cyclic_permutation.cpp -o cyclic_permutation.o
-	$(C) $(CFLAGS)  cyclic_permutation.o -o cyclic_permutation
+181_C: 181_C.cpp
+	$(C) $(CFLAGS) -c 181_C.cpp -o 181_C.o
+	$(C) $(CFLAGS)  181_C.o -o 181_C
 
-TestHashtable: TestHashTable.cpp
-	$(C) $(CFLAGS) -c TestHashTable.cpp -o TestHashTable.o
-	$(C) $(CFLAGS)  TestHashTable.o -o TestHashTable
+900_D: 900_D.cpp
+	$(C) $(CFLAGS) -c 900_D.cpp -o 900_D.o
+	$(C) $(CFLAGS)  900_D.o -o 900_D
 
 
 clean:
-	rm -rf dop_task_week4 check_token 671_C 1527_C cyclic_permutation TestHashTable authorization_server 1792_D
+	rm -rf 678_D 900_B 900_C 181_C 900_D
 	rm -rf *.o
 
 rebuild: clean all
