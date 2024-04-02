@@ -2,3 +2,5 @@
 build/
 *.o
 *.gch
+.idea/
+.gdbinit

@@ -4,7 +4,7 @@
 #include "Hashtable.hpp"
 
 template <typename Key, typename Value>
-size_t Hashtable<Key, Value>::hashFunction(Key x) {
+size_t Hashtable<Key, Value>::hashFunction(const Key &x) const {
     int s = 1, result = 0;
     for (int i = 0; i < 3; ++i) {
         result += s * (int)pow(x + i, i);
@@ -15,13 +15,19 @@ size_t Hashtable<Key, Value>::hashFunction(Key x) {
 }
 
 int main() {
-    Hashtable<int, std::string> map = Hashtable<int, std::string>(2);
-    map.inputValue(3, "ass");
-    map.inputValue(34, "wee");
-    map.inputValue(77, "can");
+    Hashtable<int, int> map = Hashtable<int, int>(2);
+    for (size_t i = 0; i < 100; i++) {
+        map.inputValue(i, i * i);
+    }
 
-    if (map.haveValue(3, "ass")) {
-        std::cout << map.getValue(3) << " " << map.getValue(34) << " " << map.getValue(77);
+    Hashtable<int, int> map_other(map);
+
+    for (int i = 0; i < 100; i += 9) {
+        std::cout << map.getValue(i) << std::endl;
+    }
+
+    for (int i = 0; i < 100; i += 9) {
+        std::cout << map_other.getValue(i) << std::endl;
     }
 
     return 0;

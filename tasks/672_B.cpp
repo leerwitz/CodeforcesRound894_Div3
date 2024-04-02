@@ -33,7 +33,6 @@ l_l_int task_answer(std::vector<l_l_int> &arr, std::vector<l_l_int> &array_degre
     l_l_int result = 0, size = 0;
     std::vector<l_l_int> arr_max_degree = std::vector<l_l_int>(34, 0);
     for (size_t i = 0; i < arr.size(); ++i) {
-        //++arr_max_degree[get_bit_degree(arr[i])];
         ++arr_max_degree[get_binary_find_degree(arr[i], 0, 30, array_degree)];
     }
 
