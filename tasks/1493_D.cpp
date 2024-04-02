@@ -68,26 +68,6 @@ void add(llint index, llint multiplier, std::vector<llint> prime, llint size, st
         }
         ++j;
     }
-
-    //    if(multiplier != 1){
-    //     old_min = 0;
-    //     current_factor = 1;
-    //     llint old_factor = map_of_prime_divisor[index][multiplier];
-    //     map_of_prime_divisor[index][multiplier] += current_factor;
-    //     if(factor_of_prime_divisor[multiplier].size() == size){
-    //         if(old_factor != 0){
-    //             old_min = *factor_of_prime_divisor[multiplier].begin();
-    //         }
-    //     }
-    //     std::multiset<llint>::iterator itr = factor_of_prime_divisor[multiplier].find(old_factor);
-    //             if(itr != factor_of_prime_divisor[multiplier].end())
-    //                     factor_of_prime_divisor[multiplier].erase(itr);
-
-    //         factor_of_prime_divisor[multiplier].insert(old_factor + current_factor);
-    //         if(factor_of_prime_divisor[multiplier].size() == size)
-    //             answer = (answer * pow(multiplier,*factor_of_prime_divisor[multiplier].begin() - old_min)) % MODULE;
-
-    // }
 }
 
 int main() {

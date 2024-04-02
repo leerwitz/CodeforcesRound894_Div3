@@ -49,7 +49,6 @@ class lnumber {
     bool even() const;
     friend std::ostream& operator<<(std::ostream& stream, const lnumber& lnum);
     friend const lnumber pow(lnumber& result, lnumber multiplier, lnumber power);
-    // const lnumber pow(lnumber n) const;
     friend const lnumber pow(lnumber& result, lnumber multiplier, lnumber power, lnumber mod);
 };
 

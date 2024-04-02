@@ -140,22 +140,13 @@ class __RSA {
 
         return message;
     }
-};
 
-// int main() {
-//     srand(time(NULL));
-//
-//     __RSA user = __RSA();
-//     std::pair<lnumber, lnumber> pub_key = user.get_public_key();
-//     std::string message = "ihdgiygjhsbhjsjcJH87272T";
-//     user.message_encryption_electronic_signature(message);
-//     std::cout << message << '\n';
-//     user.message_encryption_electronic_signature(message);
-//     std::cout << message << '\n';
-//     message = user.message_decryption_electronic_signature(message);
-//     std::cout << message << '\n';
-//     message = user.message_decryption_electronic_signature(message);
-//     std::cout << message << '\n';
-//
-//     return 0;
-// }
+    std::string message_encryption_electronic_signature(std::string &message, std::pair<lnumber, lnumber> other_private_key) {
+        message = get_number_string_from_string_99(message);
+        lnumber number = lnumber(message);
+        pow(number, number, other_private_key.first, other_private_key.second);
+        message = get_string_from_lnumber_99(number);
+
+        return message;
+    }
+};
